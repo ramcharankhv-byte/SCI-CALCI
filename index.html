@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="Calculator">
+    <div id="Display" ></div>
+    <div id="Buttons" >
+        <button onclick="clearDisplay()" class="orange" id="AC">AC</button>
+        <button onclick="prependToDisplay()" class="orange">+/-</button>
+        <button onclick="percentage()" class="orange">%</button>
+        <button onclick="appendToDisplay('/')"class="orange"><i class="fa-solid fa-divide"></i></button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')"class="orange"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')"class="orange">-</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="orange">+</button>
+        <button onclick="changeScientific()" class="scientificbtn">S</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button.>
+        <button onclick="Calculate()" class="orange">=</button>
+    </div>
+
+    <div id="scientific-buttons"> 
+    <button onclick="scientific('sin')" class="sctbtn">sin</button>
+    <button onclick="scientific('cos')" class="sctbtn">cos</button>
+    <button onclick="scientific('tan')" class="sctbtn">tan</button>
+    <button onclick="scientific('log')" class="sctbtn">log</button>
+    <button onclick="scientific('asin')" >sin⁻¹</button>
+    <button onclick="scientific('acos')" >cos⁻¹</button>
+    <button onclick="scientific('atan')" >tan⁻¹</button>
+    <button onclick="scientific('ln')" class="sctbtn">ln</button>
+    <button onclick="scientific('square')" >x²</button>
+    <button onclick="scientific('cube')" >x³</button>
+    <button  onclick="appendToDisplay('^')" >xʸ</button>
+    <button onclick="scientific('sqrt')" class="sctbtn">√</button>
+    <button onclick="changeNormal()" class="nrmlbtn">N</button>
+    <button onclick="scientific('pi')" >π</button>
+    <button onclick="scientific('e')" >e</button>
+    <button onclick="scientific('reciprocal')" class="sctbtn">1/x</button>
+    </div>
+    </div>    
+    <script src="script.js"></script>
+</body>
+</html>

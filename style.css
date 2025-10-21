@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "SF Pro", Helvetica, sans-serif;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    touch-action: pan-y;
+}
+
+#Calculator {
+    background-color: black;
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+/* --- Display (45%) --- */
+#Display {
+    height: 45%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    text-align: right;
+    font-family: "SF Pro", Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow-y: auto; /* scroll upward when content grows */
+    border: none;
+    padding: 0.5rem;
+    scroll-behavior: smooth;
+}
+
+/* --- Buttons (55%) --- */
+#Buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: "SF Pro", Helvetica, sans-serif;
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    height: 55%;
+    padding: 1rem;
+}
+
+/* --- Button Style --- */
+button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: #505050;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(80, 80, 80, 0.75);
+}
+
+/* --- Color Variants --- */
+.orange {
+    background-color: #FF9500;
+}
+.orange:hover {
+    background-color: rgba(255, 149, 0, 0.76);
+}
+.scientificbtn{
+    background-color: rgb(28, 156, 246);
+}
+.scientificbtn:hover{
+     background-color: rgba(28, 156, 246,0.76);
+}
+
+#scientific-buttons{
+     display: none;
+    grid-template-columns: repeat(4, 1fr);
+    font-family: "SF Pro", Helvetica, sans-serif;
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+    height: 55%;
+    padding: 1rem;
+   
+}
+.sctbtn{
+    background-color: rgb(28, 156, 246);
+}
+.sctbtn:hover{
+     background-color: rgba(28, 156, 246,0.76);
+}
+.nrmlbtn{
+    background-color: #FF9500;
+}
+.nrmlbtn:hover{
+    background-color: rgba(255, 149, 0, 0.76);
+}
+
+
+
+/* --- Laptops (≥1024px) --- */
+@media screen and (min-width: 1024px) {
+    #Calculator {
+        max-width: 500px;
+    }
+    #Display {
+        font-size: 5.5rem;
+    }
+    button {
+        height: 110px;
+        width: 110px;
+        font-size: 2.2rem;
+    }
+}
+
+/* --- Tablets (577px–992px) --- */
+@media (min-width: 577px) and (max-width: 992px) {
+    #Calculator {
+        max-width: 400px;
+    }
+    #Display {
+        font-size: 4rem;
+        padding-right: 20px;
+    }
+    button {
+        height: 85px;
+        width: 85px;
+        font-size: 1.8rem;
+    }
+}
+
+/* --- Phones (≤576px) --- */
+@media (max-width: 576px) {
+    #Calculator {
+        max-width: 95%;
+        border-radius: 15px;
+        height: 100dvh; /* fills full mobile screen */
+    }
+    #Display {
+        font-size: 3.5rem;
+        padding-right: 15px;
+    }
+    button {
+        height: 70px;
+        width: 70px;
+        font-size: 1.5rem;
+    }
+    #Buttons {
+        gap: 0.4rem;
+    }
+}
