@@ -1,6 +1,13 @@
 let display = document.getElementById("Display");
 const btn = document.querySelector('#AC');
 
+
+function Backspace(){
+    if (display && display.textContent.length > 0) {
+        // Slice the value to remove the last character
+        display.textContent = display.textContent.slice(0, -1);
+    }
+}
 function updateACButton() {
     if (display.textContent === "") {
         btn.innerText = "AC";
@@ -37,7 +44,7 @@ function Calculate(){
         // Replace '^' with '**' for exponentiation
         expression = expression.replace(/\^/g, "**");
 
-        display.textContent = eval(expression).toFixed(5);
+        display.textContent = eval(expression);
     } catch(err) {
         display.textContent = "ERROR";
     }
@@ -48,9 +55,9 @@ function scientific(func) {
     // Handle constants first
     if (func === 'pi') {
         if (display.textContent === "") {
-            display.textContent = Math.PI.toFixed(5);
+            display.textContent = Math.PI;
         } else {
-            display.textContent = (parseFloat(display.textContent) * Math.PI).toFixed(5);
+            display.textContent = (parseFloat(display.textContent) * Math.PI);
         }
         updateACButton();
         return;
@@ -74,6 +81,9 @@ function scientific(func) {
         case 'sin': display.textContent = Math.sin(value*Math.PI/180).toFixed(5); break;
         case 'cos': display.textContent = Math.cos(value*Math.PI/180).toFixed(5); break;
         case 'tan': display.textContent = Math.tan(value*Math.PI/180).toFixed(5); break;
+        case 'sinh':display.textContent = Math.sinh(value).toFixed(5);break;
+        case 'cosh':display.textContent = Math.cosh(value).toFixed(5);break;
+        case 'tanh':display.textContent = Math.tanh(value).toFixed(5);break;
         case 'log': display.textContent = Math.log10(value).toFixed(5); break;
         case 'ln': display.textContent = Math.log(value).toFixed(5); break;
         case 'square': display.textContent = Math.pow(value, 2).toFixed(5); break;

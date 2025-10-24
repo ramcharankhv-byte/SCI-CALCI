@@ -13,7 +13,7 @@
     <div id="Display" ></div>
     <div id="Buttons" >
         <button onclick="clearDisplay()" class="orange" id="AC">AC</button>
-        <button onclick="prependToDisplay()" class="orange">+/-</button>
+        <button onclick="Backspace()" class="orange"><i class="fa-solid fa-delete-left"></i></button>
         <button onclick="percentage()" class="orange">%</button>
         <button onclick="appendToDisplay('/')"class="orange"><i class="fa-solid fa-divide"></i></button>
         <button onclick="appendToDisplay('7')">7</button>
@@ -43,8 +43,12 @@
     <button onclick="scientific('acos')" >cos⁻¹</button>
     <button onclick="scientific('atan')" >tan⁻¹</button>
     <button onclick="scientific('ln')" class="sctbtn">ln</button>
-    <button onclick="scientific('square')" >x²</button>
-    <button onclick="scientific('cube')" >x³</button>
+    <button onclick="scientific('sinh')">sinh</button>
+    <button onclick="scientific('cosh')">cosh</button>
+    <button onclick="scientific('tanh')">tanh</button>
+    <button onclick="scientific('square')" class="sctbtn" >x²</button>
+    <button onclick="appendToDisplay('(')">(</button>
+    <button onclick="appendToDisplay(')')">)</button>
     <button  onclick="appendToDisplay('^')" >xʸ</button>
     <button onclick="scientific('sqrt')" class="sctbtn">√</button>
     <button onclick="changeNormal()" class="nrmlbtn">N</button>
